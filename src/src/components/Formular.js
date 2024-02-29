@@ -1,7 +1,12 @@
 
 function Formular() {
     return (
-        <h1>This is a Formular Component</h1>
+        <div>
+            <h1>This is a Formular Component</h1>
+            <form>
+                <label>This is the form</label>
+            </form> 
+        </div>
     )
 }
 
