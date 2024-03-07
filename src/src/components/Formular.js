@@ -1,7 +1,17 @@
+import './Formular.css';
+
 
 function Formular() {
-    return (
-        <h1>This is a Formular Component</h1>
+    return (   
+      <form className="formular">
+        <div>
+          <div className="formular-container">
+            <input id="usernameField" placeholder="Username" />
+            <input id="passwordField" placeholder="password" />
+            <button id="loginButton" type="submit">Login</button>
+          </div>
+        </div>
+      </form>
     )
 }
 

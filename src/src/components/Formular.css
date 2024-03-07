@@ -1,0 +1,9 @@
+.formular {
+    width: 500px;
+    margin: 100px;
+}
+
+.formular-container {
+    display: flex;
+    flex-direction: column;
+}
