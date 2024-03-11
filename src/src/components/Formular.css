@@ -1,9 +1,74 @@
 .formular {
-    width: 500px;
-    margin: 100px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(1);
+    margin-top: 150px;
+}
+
+.formular-title {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.formular-description {
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.formular-label {
+    margin-bottom: 15px;
+}
+
+.formular-label-error {
+    margin-top: 10px;
+    color:mediumvioletred;
 }
 
 .formular-container {
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 450px;
+}
+
+.formular-items {
+    width: auto;
+    height: 100%;
     display: flex;
+    gap: 30px;
     flex-direction: column;
+    
+}
+
+.formular-button {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.formular-button:hover {
+    opacity: .9;
 }

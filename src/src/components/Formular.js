@@ -1,18 +1,39 @@
 import './Formular.css';
 
-
 function Formular() {
-    return (   
-      <form className="formular">
+
+  function HandleSubmit() {
+    //Gets triggered when the form was successfully submited
+    let emailField = document.getElementById('emailField');
+    let passwordField = document.getElementById('passwordField');
+    alert(emailField.value + passwordField.value)
+  }
+
+  return (   
+    <div className="formular">
+      <form onSubmit={HandleSubmit} className="formular-container">
         <div>
-          <div className="formular-container">
-            <input id="usernameField" placeholder="Username" />
-            <input id="passwordField" placeholder="password" />
-            <button id="loginButton" type="submit">Login</button>
+          <h2 className="formular-title">SignUp</h2>
+          <p className="formular-description">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+          </p>
+          <div className="formular-items">
+            <div>
+              <p className="formular-label">Email</p>
+              <input inputMode='email' type='email' required className="input" id="emailField" placeholder="JohnDoe@gmail.com" />
+            </div>
+            
+            <div>
+              <p className="formular-label">Passwort</p>
+                <input type='password' inputMode='email' className="input" id="passwordField" placeholder="Example123" />
+              </div>
+            <button className="formular-button" id="loginButton" type='submit'>Login</button>
+
           </div>
         </div>
       </form>
-    )
+    </div>
+  )
 }
 
 export default Formular;
