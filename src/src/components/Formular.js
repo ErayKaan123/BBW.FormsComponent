@@ -1,11 +1,16 @@
 import './Formular.css';
 import '../App.css'
 import { useNavigate } from 'react-router-dom';
+import myjson from "./loginData/users.json";
 
 function Formular(props) {
   const navigate = useNavigate();
-  function HandleSubmit() {
+  function HandleSubmit(e) {
     //HANDLES BUTTON CLICK
+    var test = fetch(myjson).then((response) => response.text());
+    console.log(test);
+    //alert(test[0].users[0].email);
+    //alert(e.target.querySelector("#emailField").value);
     navigate(props.redirectTo);
   }
 
