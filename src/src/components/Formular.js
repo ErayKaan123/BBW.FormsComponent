@@ -1,12 +1,12 @@
 import './Formular.css';
+import '../App.css'
+import { useNavigate } from 'react-router-dom';
 
-function Formular() {
-
+function Formular(props) {
+  const navigate = useNavigate();
   function HandleSubmit() {
-    //Gets triggered when the form was successfully submited
-    let emailField = document.getElementById('emailField');
-    let passwordField = document.getElementById('passwordField');
-    alert(emailField.value + passwordField.value)
+    //HANDLES BUTTON CLICK
+    navigate(props.redirectTo);
   }
 
   return (   
@@ -27,7 +27,7 @@ function Formular() {
               <p className="formular-label">Passwort</p>
                 <input type='password' inputMode='email' className="input" id="passwordField" placeholder="Example123" />
               </div>
-            <button className="formular-button" id="loginButton" type='submit'>Login</button>
+            <button className="app-button app-button-primary" id="loginButton" type='submit'>Login</button>
 
           </div>
         </div>

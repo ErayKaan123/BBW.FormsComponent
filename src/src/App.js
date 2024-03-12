@@ -1,11 +1,22 @@
 import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './App.css';
-import Formular from './components/Formular';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
 
 function App() {
   return (
     <div className="App">
-      <Formular></Formular>
+      <Router>
+          <Routes>
+            <Route exact path="/" element={<Login/>}/>
+            <Route exact path="/profile" element={<Profile/>}/>
+          </Routes>
+      </Router>
     </div>
   );
 }
