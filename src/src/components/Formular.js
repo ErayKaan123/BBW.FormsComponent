@@ -1,5 +1,6 @@
 import './Formular.css';
-import '../App.css'
+import '../App.css';
+import React from 'react';
 
 function Formular(props) {
   function HandleSubmit(e) {
@@ -10,13 +11,13 @@ function Formular(props) {
     while(i < users.length - 1){
       if(users[i].email == email){
         if(users[i].password == password){
-          props.success(true)
+          props.onafterlogin(email, users[i].name)
           return;
         }
       }
       i++
     }
-    alert('failed to log in')
+    alert("Failed to log in")
   }
 
   return (   

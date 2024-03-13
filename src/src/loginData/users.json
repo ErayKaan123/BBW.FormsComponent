@@ -1,14 +1,14 @@
 {
     "users":[
       {
-          "email":"asidasd@asda.asd",
+          "email":"eray.kaan@gmail.com",
           "password": "123",
           "name":"Eray"
       },
       {
-        "email":"asdadsadasdasda@asda.asd",
+        "email":"jean-luc@gmail.com",
         "password": "321",
-        "name":"JeanLuc"
+        "name":"Jean-Luc"
         }
     ]
   }
