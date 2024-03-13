@@ -6,20 +6,20 @@ import Dialog from '../dialog/MessageBox';
 import MessageBox from '../dialog/MessageBox';
 
 function Formular(props) {
-  const navigate = useNavigate();
-  function HandleSubmit(e) {
-    //HANDLES BUTTON CLICK
-    var test = fetch(myjson).then((response) => response.text());
-    console.log(test);
-    //alert(test[0].users[0].email);
-    //alert(e.target.querySelector("#emailField").value);
-    navigate(props.redirectTo);
+
+  function handleSubmit(e) {
+    if (props.onSubmit) {
+      let emailField = document.getElementById("emailField");
+      let passwordField = document.getElementById("passwordField");
+      props.onSubmit(emailField.value, passwordField.value);
+    }
+
   }
 
   return (   
     <div>
       <div className="formular">
-        <form onSubmit={HandleSubmit} className="formular-container">
+        <form onSubmit={handleSubmit} className="formular-container">
           <div>
             <h2 className="formular-title">SignUp</h2>
             <p className="formular-description">
