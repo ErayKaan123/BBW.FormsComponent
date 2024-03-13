@@ -1,17 +1,22 @@
 import './Formular.css';
 import '../App.css'
-import { useNavigate } from 'react-router-dom';
-import myjson from "./loginData/users.json";
 
 function Formular(props) {
-  const navigate = useNavigate();
   function HandleSubmit(e) {
-    //HANDLES BUTTON CLICK
-    var test = fetch(myjson).then((response) => response.text());
-    console.log(test);
-    //alert(test[0].users[0].email);
-    //alert(e.target.querySelector("#emailField").value);
-    navigate(props.redirectTo);
+    var users = props.users.users;
+    var email = e.target.querySelector("#emailField").value;
+    var password = e.target.querySelector("#passwordField").value;
+    var i = 0;
+    while(i < users.length - 1){
+      if(users[i].email == email){
+        if(users[i].password == password){
+          props.success(true)
+          return;
+        }
+      }
+      i++
+    }
+    alert('failed to log in')
   }
 
   return (   
