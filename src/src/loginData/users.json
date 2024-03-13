@@ -2,11 +2,13 @@
     "users":[
       {
           "email":"asidasd@asda.asd",
-          "password": "123"
+          "password": "123",
+          "name":"Eray"
       },
       {
         "email":"asdadsadasdasda@asda.asd",
-        "password": "1234"
+        "password": "321",
+        "name":"JeanLuc"
         }
     ]
   }
