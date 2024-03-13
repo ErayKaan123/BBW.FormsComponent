@@ -7,22 +7,12 @@ function Login() {
     function Logout(){
         setState(false);
     }
-    if (state == false){
+    function afterlogin(name, email){
+
+    }
     return (
-            <Form redirectTo='/profile' users={myjson} success={setState}/>
+            <Form users={myjson} onafterlogin={afterlogin}/>
     )
-    }
-    else if (state == true){
-        return(
-        <div className='profile'>
-            <div className='profile-container'>
-                <h1 style={{fontSize:36, textAlign: 'center'}}>Welcome ErayKaan!</h1>
-                <h1 style={{fontSize:36}}>115eraykaan32@gmail.com</h1>
-                <button onClick={Logout} style={{marginTop: '60px'}} className='app-button app-button-error'>Logout</button>
-            </div>
-        </div>
-        )
-    }
 }
 
 export default Login;
