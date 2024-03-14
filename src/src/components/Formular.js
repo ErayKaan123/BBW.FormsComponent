@@ -4,20 +4,20 @@ import React from 'react';
 
 function Formular(props) {
   function HandleSubmit(e) {
-    var users = props.users.users;
+    var users = props.data.users;
     var email = e.target.querySelector("#emailField").value;
     var password = e.target.querySelector("#passwordField").value;
     var i = 0;
     while(i < users.length - 1){
       if(users[i].email == email){
         if(users[i].password == password){
-          props.onafterlogin(email, users[i].name)
+          props.onSuccess(email, users[i].name)
           return;
         }
       }
       i++
     }
-    alert("Failed to log in")
+    props.onFailed(email, password);
   }
 
   return (   

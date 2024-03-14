@@ -1,24 +1,24 @@
-import { useNavigate } from 'react-router-dom'
-import './Profile.css'
+import { useNavigate } from 'react-router-dom';
+import './Profile.css';
 
 function Profile(props) {
 
     const navigate = useNavigate();
     function Logout() {
-        props.onafterlogout();
+        navigate("/");
     }
 
     return(
         <div className='profile'>
             <div className='profile-container'>
-                <h1 style={{fontSize:36, textAlign: 'center'}}>Welcome {props.name}!</h1>
-                <h1 style={{fontSize:36}}>{props.email}</h1>
+                <h1 style={{fontSize:36, textAlign: 'center'}}>Welcome ErayKaan!</h1>
+                <h1 style={{fontSize:36}}>@gmail.com</h1>
                 <center>
                     <button onClick={Logout} style={{marginTop: '60px', textAlign: 'center'}} className='app-button app-button-error'>Logout</button>
                 </center>
             </div>
         </div>
-        )
+    )
 }
 
 export default Profile;
