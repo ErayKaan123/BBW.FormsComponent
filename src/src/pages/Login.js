@@ -6,6 +6,8 @@ function Login() {
     
     const navigate = useNavigate();
     function onSuccess(email, name){ 
+        localStorage.setItem('name',name)
+        localStorage.setItem('email',email)
         navigate("/profile");
     }
     function onFailed(email, password){ 
