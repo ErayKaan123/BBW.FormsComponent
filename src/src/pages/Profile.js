@@ -1,15 +1,24 @@
 import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import './Profile.css';
 
 function Profile(props) {
 
     const navigate = useNavigate();
     function Logout() {
-        localStorage.setItem('name','')
-        localStorage.setItem('email','')
+        localStorage.setItem('name',null)
+        localStorage.setItem('email',null)
         navigate("/");
     }
-
+    useEffect(() => {
+        if (localStorage.getItem('name') === null) {
+            navigate("/");
+        }
+        if (localStorage.getItem('name') == 'null') {
+            navigate("/");
+        }
+      });
+    
     return(
         <div className='profile'>
             <div className='profile-container'>
