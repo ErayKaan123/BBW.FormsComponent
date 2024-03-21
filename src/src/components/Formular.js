@@ -26,7 +26,7 @@ function Formular(props) {
         <div>
           <h2 className="formular-title">SignUp</h2>
           <p className="formular-description">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+          Please Log into youre account
           </p>
           <div className="formular-items">
             <div>
