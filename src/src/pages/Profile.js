@@ -1,18 +1,32 @@
-import './Profile.css';
-import '../App.css'
 import { useNavigate } from 'react-router-dom';
-function Profile() {
+import React, { useEffect } from 'react';
+import './Profile.css';
+
+function Profile(props) {
+
     const navigate = useNavigate();
-    function LogOut() {
+    function Logout() {
+        localStorage.setItem('name',null)
+        localStorage.setItem('email',null)
         navigate("/");
     }
-
-    return (
+    useEffect(() => {
+        if (localStorage.getItem('name') === null) {
+            navigate("/");
+        }
+        if (localStorage.getItem('name') == 'null') {
+            navigate("/");
+        }
+      });
+    
+    return(
         <div className='profile'>
             <div className='profile-container'>
-                <h1 style={{fontSize:36, textAlign: 'center'}}>Welcome ErayKaan!</h1>
-                <h1 style={{fontSize:36}}>115eraykaan32@gmail.com</h1>
-                <button onClick={LogOut} style={{marginTop: '60px'}} className='app-button app-button-error'>Logout</button>
+                <h1 style={{fontSize:36, textAlign: 'center'}}>Welcome {localStorage.getItem('name')}!</h1>
+                <h1 style={{fontSize:36}}>{localStorage.getItem('email')}</h1>
+                <center>
+                    <button onClick={Logout} style={{marginTop: '60px', textAlign: 'center'}} className='app-button app-button-error'>Logout</button>
+                </center>
             </div>
         </div>
     )
