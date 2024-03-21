@@ -24,7 +24,7 @@ function Formular(props) {
     <div className="formular">
       <form onSubmit={HandleSubmit} className="formular-container">
         <div>
-          <h2 className="formular-title">SignUp</h2>
+          <h2 className="formular-title">SignIn</h2>
           <p className="formular-description">
           Please Log into youre account
           </p>
